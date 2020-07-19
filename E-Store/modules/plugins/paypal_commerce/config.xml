@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+ * CubeCart v6
+ * ========================================
+ * CubeCart is a registered trade mark of CubeCart Limited
+ * Copyright CubeCart Limited 2014. All rights reserved.
+ * UK Private Limited Company No. 5323904
+ * ========================================
+ * Web:   http://www.cubecart.com
+ * Email:  sales@cubecart.com
+ * License:  GPL-3.0 http://opensource.org/licenses/GPL-3.0
+-->
+<installer version="1.0">
+  <info>
+	<uid>paypal_commerce@cubecart.com</uid>
+	<type>plugins</type>
+	<mobile_optimized>true</mobile_optimized>
+	<name><![CDATA[PayPal Commerce Platform]]></name>
+	<description><![CDATA[Accept card payment, PayPal and alternative payment methods via the new PayPal Commerce Platform for business.]]></description>
+	<version>1.3.16</version>
+	<minVersion>5.0.0</minVersion>
+	<maxVersion>6.*.*</maxVersion>
+	<creator><![CDATA[CubeCart Limited]]></creator>
+	<homepage><![CDATA[http://www.cubecart.com]]></homepage>
+  </info>
+  <hooks>
+	<hook trigger="class.cubecart.display_basket.alternate" enabled="1"><![CDATA[Checkout Smart Button]]></hook>
+	<hook trigger="class.cubecart.pre_basket" enabled="1"><![CDATA[Create Order]]></hook>
+	<hook trigger="class.cubecart.construct.confirm" enabled="1"><![CDATA[Create Customer]]></hook>
+	<hook trigger="class.cart.update" enabled="1"><![CDATA[Update order]]></hook>
+	<hook trigger="class.cart.clear" enabled="1"><![CDATA[Clear Cart]]></hook>
+	<hook trigger="class.cubecart.display_gateways" enabled="1"><![CDATA[Display Gateway or Make Payment]]></hook>
+	<hook trigger="class.cubecart.construct.cancel" enabled="1"><![CDATA[Cancel PayPal Commerce]]></hook>
+	<hook trigger="class.cubecart.construct.callback.gateway" enabled="1"><![CDATA[Path to plugin gateway class]]></hook>
+	<hook trigger="class.cubecart.construct.gateway" enabled="1"><![CDATA[Finalize order]]></hook>
+	<hook trigger="class.cart.construct.pre" enabled="1"><![CDATA[Prevent basket changes]]></hook>
+	<hook trigger="class.order.order_status" enabled="1"><![CDATA[Void auth for cancelled order]]></hook>
+	<hook trigger="class.gui.display_side_basket" enabled="1"><![CDATA[Hide Checkout Button]]></hook>
+  </hooks>
+</installer>

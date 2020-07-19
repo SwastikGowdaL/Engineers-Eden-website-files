@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<installer version="1.0">
+  <info>
+	<uid>shipping-All_In_One_Shipping@expandingbrain.com</uid>
+	<type>shipping</type>
+	<name><![CDATA[All_In_One_Shipping]]></name>
+	<description><![CDATA[Advanced shipping module that can calculate shipping based on the weight, subtotal and number of items in the order.]]></description>
+	<version>1.0.16</version>
+	<minVersion>6.0.0</minVersion>
+	<maxVersion>6.*.*</maxVersion>
+	<creator><![CDATA[CubeCart Limited]]></creator>
+	<homepage><![CDATA[https://www.cubecart.com]]></homepage>
+	<block>false</block>
+  </info>
+</installer>

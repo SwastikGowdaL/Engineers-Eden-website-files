@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * CubeCart v6
+ * ========================================
+ * CubeCart is a registered trade mark of CubeCart Limited
+ * Copyright CubeCart Limited 2014. All rights reserved.
+ * UK Private Limited Company No. 5323904
+ * ========================================
+ * Web:   http://www.cubecart.com
+ * Email:  sales@cubecart.com
+ * License:  GPL-3.0 http://opensource.org/licenses/GPL-3.0
+-->
+<definitions version="1.0">
+ <group name="paypal_commerce">
+   <string name="pay_by_card"><![CDATA[Pay by Card]]></string>
+   <string name="card_number"><![CDATA[Card Number]]></string>
+   <string name="expiry_date"><![CDATA[Expiry Date]]></string>
+   <string name="cvv"><![CDATA[CVV]]></string>
+   <string name="cvv_placeholder"><![CDATA[CVV]]></string>
+   <string name="make_payment"><![CDATA[Make Payment]]></string>
+   <string name="expire_placeholder"><![CDATA[MM/YYYY]]></string>
+   <string name="title"><![CDATA[PayPal Commerce Platform]]></string>
+   <string name="strap"><![CDATA[Accept card payment, PayPal and alternative payment methods via the new PayPal Commerce Platform for business.]]></string>
+   <string name="onboarding"><![CDATA[Onboarding]]></string>
+   <string name="primary_email"><![CDATA[Primary Email]]></string>
+   <string name="secret"><![CDATA[Secret]]></string>
+   <string name="client_id"><![CDATA[Client ID]]></string>
+   <string name="click_to_reveal"><![CDATA[Click to reveal]]></string>
+   <string name="payment_settings"><![CDATA[Payment Settings]]></string>
+   <string name="enable_ppc"><![CDATA[Enable PayPal Commerce]]></string>
+   <string name="settlement_mode"><![CDATA[Settlement Mode]]></string>
+   <string name="capture"><![CDATA[Capture payment immediately]]></string>
+   <string name="authorize"><![CDATA[Authorize payment to capture later]]></string>
+   <string name="disable_cards"><![CDATA[Card Payments]]></string>
+   <string name="3ds"><![CDATA[3D Secure]]></string>
+   <string name="3ds_note"><![CDATA[3D Secure enables you to authenticate card holders through card issuers. It reduces the likelihood of fraud when you use supported cards and improves transaction performance. A successful 3D Secure authentication can shift liability for chargebacks due to fraud from you the merchant to the card issuer.]]></string>
+   <string name="3ds_note_2"><![CDATA[3D Secure authentication is performed only if the card is enrolled for the service. In scenarios where the 3D Secure authentication hasn't been successful, you have the option to complete the payment at your own risk, meaning that you the merchant will be liable in case of a chargeback.]]></string>
+   <string name="3ds_scenario"><![CDATA[3D Secure Scenarios]]></string>
+   <string name="hide_advanced"><![CDATA[Hide Advanced Settings]]></string>
+   <string name="show_advanced"><![CDATA[Show Advanced Settings]]></string>
+   <string name="button_styling"><![CDATA[Button Styling]]></string>
+   <string name="button_layout"><![CDATA[Smart Button Layout]]></string>
+   <string name="horizontal"><![CDATA[Horizontal]]></string>
+   <string name="vertical"><![CDATA[Vertical]]></string>
+   <string name="button_color"><![CDATA[Smart Button Color]]></string>
+   <string name="gold"><![CDATA[Gold]]></string>
+   <string name="blue"><![CDATA[Blue]]></string>
+   <string name="silver"><![CDATA[Silver]]></string>
+   <string name="white"><![CDATA[White]]></string>
+   <string name="black"><![CDATA[Black]]></string>
+   <string name="button_shape"><![CDATA[Smart Button Shape]]></string>
+   <string name="rectangle"><![CDATA[Rectangle]]></string>
+   <string name="pill"><![CDATA[Pill]]></string>
+   <string name="button_tagline"><![CDATA[Smart Button Tagline (Horizontal Only)]]></string>
+   <string name="button_funding"><![CDATA[Funding Icons (Horizontal Only)]]></string>
+   <string name="button_size"><![CDATA[Smart Button Size]]></string>
+   <string name="small"><![CDATA[Small]]></string>
+   <string name="medium"><![CDATA[Medium]]></string>
+   <string name="large"><![CDATA[Large]]></string>
+   <string name="responsive"><![CDATA[Responsive]]></string>
+   <string name="webhooks"><![CDATA[Webhooks]]></string>
+   <string name="url"><![CDATA[URL]]></string>
+   <string name="webhook_id"><![CDATA[Webhook ID]]></string>
+   <string name="start_today"><![CDATA[Start taking payments with PayPal today!]]></string>
+   <string name="sign_up_or"><![CDATA[Sign up or connect your existing account]]></string>
+   <string name="disconnect"><![CDATA[Disconnect your PayPal account]]></string>
+   <string name="disconnect_check"><![CDATA[Are you sure you want to disconnect your PayPal account?]]></string>
+   <string name="express_signup"><![CDATA[If your country isn’t available in the list when going through the PayPal onboarding experience please <a target="_blank" data-paypal-onboard-complete="onboardedCallback" href="%SIGN_UP_LINK%" data-paypal-button="">click here</a>.]]></string>
+   <string name="undefined_undefined_undefined"><![CDATA[3D Secure not required for the buyer or the card network did not require 3D Secure.]]></string>
+   <string name="false_ERROR_ERROR"><![CDATA[An error occurred with the 3DS authentication system.]]></string>
+   <string name="false_NO_SKIPPED_BY_BUYER"><![CDATA[Buyer was presented the 3D Secure challenge but chose to skip the authentication.]]></string>
+   <string name="false_NO_FAILURE"><![CDATA[Buyer may have failed the challenge or the device was not verified.]]></string>
+   <string name="false_NO_BYPASSED"><![CDATA[3D Secure was skipped as authentication system did not require a challenge.]]></string>
+   <string name="false_NO_ATTEMPTED"><![CDATA[Card is not enrolled in 3D Secure as card issuing bank is not participating in 3D Secure.]]></string>
+   <string name="false_NO_UNAVAILABLE"><![CDATA[Issuing bank is not able to complete authentication.]]></string>
+   <string name="false_NO_CARD_INELIGIBLE"><![CDATA[Card is not eligible for 3DS Secure authentication.]]></string>
+   <string name="please_wait"><![CDATA[Please wait &hellip;]]></string>
+   <string name="order_status_behaviour"><![CDATA[Order Status Behaviour]]></string>
+   <string name="order_status_change_on"><![CDATA[Update order status to "Processing" on]]></string>
+   <string name="payment_capture"><![CDATA[payment capture]]></string>
+   <string name="payment_authorization"><![CDATA[payment authorization]]></string>
+
+ </group>
+</definitions>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language version="1.0">
+	<info>
+		<title>nl-NL</title>
+		<code>nl-NL</code>
+		<character_set>utf-8</character_set>
+		<version>1.0.0</version>
+		<minVersion>5.0.0</minVersion>
+		<maxVersion>6.*.*</maxVersion>
+	</info>
+	<translation>
+		<group name="paypal_commerce">
+			<string name="pay_by_card"><![CDATA[Betal med kort]]></string>
+			<string name="card_number"><![CDATA[Kaartnummer]]></string>
+			<string name="expiry_date"><![CDATA[Verval]]></string>
+			<string name="cvv"><![CDATA[CVC]]></string>
+			<string name="cvv_placeholder"><![CDATA[CVC]]></string>
+			<string name="make_payment"><![CDATA[Betalen]]></string>
+			<string name="expire_placeholder"><![CDATA[MM / YYYY]]></string>
+			<string name="please_wait"><![CDATA[Wacht alsjeblieft &hellip;]]></string>
+		</group>
+	</translation>
+</language>
