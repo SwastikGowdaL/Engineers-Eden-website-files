@@ -1,0 +1,92 @@
+.navbar-custom a{
+	color: white;
+    
+}
+.navbar-custom li a{
+	font-size: 18px;
+	padding-left: 30px;
+	padding-right:30px;
+	font-weight:bold;
+}
+
+.navbar-custom li a:hover
+{
+	background:gray ; 
+	border: #eeeeee 1px solid;
+}
+.second-bar{
+	background: #eeeeee;
+}
+.second-bar li a{
+	color:gray;
+} 
+.second-bar li a:hover{
+	background:white;
+}
+.vid-sidebar-list{}
+.vid-sidebar-list-item{
+	display: block;
+	color:georgian;
+	font-weight:bold;
+	padding:8px;
+}
+.vid-sidebar-list-item:hover{
+	background:#0f74bc;
+	color: white;
+	text-decoration:none;
+}
+.featured-video{}
+.play-button{
+	position: absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:60px;
+	background-image: url(../images/pb.png);
+	opacity: 0;
+	transition: .3s opacity;
+	z-index: 1;
+}
+.play-button:hover{
+	opacity: 1;
+}
+.video-details{
+	position: absolute;
+	width:100%;
+	bottom: 0;
+	left:0;
+	color:white;
+	padding: 10px 25px;
+	background-image: url(../images/b3.png);
+	background-size: 532px 80px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.video-details h3{
+	margin: 0;
+}
+.video-details strong{
+	text-decoration:underline;
+}
+.new-video-details {}
+.new-video-details h4{
+	margin: 5px 0;
+}
+.new-video-author {
+	margin-bottom:10px;
+}
+.new-video-description {
+}
+.btn-square {
+	border-radius: 0;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.user-name-player-page {
+	color:georgian;
+	font-weight: bold;
+	display:block;
+}

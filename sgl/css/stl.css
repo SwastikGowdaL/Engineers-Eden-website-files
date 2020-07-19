@@ -1,0 +1,35 @@
+.user-image-container img{
+	width: 95px;
+	height: 54px;
+}
+.video-description{
+	padding:30px;
+}
+.video-description p {
+	color: #656565;
+	line-height: 20px;
+}
+.margin-20{
+	margin: 20px;
+}
+.sidebar-videos{
+	margin-bottom: 20px;
+	border-bottom: 1px solid gray;
+}
+.sidebar-videos a{
+	color:black;
+	transition: .3s color;
+}
+.sidebar-videos a:hover{
+	color:#0f74bc;
+	text-decoration:none;
+}
+.sidebar-videos-title{
+	margin:0;
+}
+.register_form{
+	margin: 20px;
+	border:2px solid black;
+	border-radius:10px;
+	padding: 8px;
+}
