@@ -1,0 +1,199 @@
+<?php
+/************* WordSearchPuzzle V1.0 *******************/
+/*
+Released by AwesomePHP.com, under the GPL License, a
+copy of it should be attached to the zip file, or
+you can view it on http://AwesomePHP.com/gpl.txt
+*/
+/************* WordSearchPuzzle V1.0 *******************/	
+
+/* Header Template - Everything till letter show */
+$HEADER_TEMPLATE = <<<END
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>WordSearchPuzzle V1.0</title>
+<script language="javascript">
+// Function to add word to list
+function add_word(){
+	var curlist = document.getElementById('my_words').value;
+	var newitem = document.getElementById('cur_word').value;
+
+	if(curlist != null && curlist != ''){
+		document.getElementById('my_words').value = curlist+'\\n'+newitem;
+	} else{
+		document.getElementById('my_words').value = newitem;
+	}
+	document.getElementById('cur_word').value = '';
+}
+
+// Function to add letter
+function add_letter(letter){
+	var cur_word = document.getElementById('cur_word').value;
+	document.getElementById('cur_word').value = cur_word+letter;	
+}
+
+// Function to remove word from list
+function remove_word(){
+	var removeword = window.prompt('Please enter word to remove from list:');
+	var new_list='';
+	if(removeword != null){
+		var curlist = document.getElementById('my_words').value;
+		var array = curlist.split('\\n');
+		var x=0;
+		while(array[x] != null){
+			if(array[x] != removeword && array[x] != '' && array[x] != null && array[x] != 'undefined'){
+				if(new_list != ''){
+					new_list = new_list+'\\n'+array[x];
+				} else {
+					new_list = array[x];
+				}
+			}
+			x++;
+		}
+		var curlist = document.getElementById('my_words').value = new_list;
+	}	
+}
+
+// Function to show hint
+function show_hint(type){
+	if(type == 1){
+		var array_hits = [%HINT_OPTIONS%];
+		var rand_no = Math.ceil(%HINT_COUNT%*Math.random())
+			var letter = array_hits[rand_no];
+		elementlist = document.getElementsByTagName('td');
+	}
+
+	for (i = 0; i < elementlist.length; i++){
+		var value = elementlist[i].innerHTML;
+		var stripped = value.replace(/(<([^>]+)>)/ig,""); 
+		if(stripped == letter){
+			elementlist[i].style.backgroundColor='#CCCCCC';	
+		} else {
+			elementlist[i].style.backgroundColor='#FFFFFF';	
+		}
+	}
+		
+}
+</script>
+<style type="text/css">
+/* Tables */
+td {
+	border:1px solid #CCCCCC;
+	padding:5px;
+}
+</style>
+</head>
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+<form name="puzzle" id="puzzle" method="post" action="$_SERVER[PHP_SELF]" style="display:inline;">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+  <td colspan="%PUZ_W%" bgcolor="#FFE8E8">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><div align="center"><strong><font face="Verdana, Arial, Helvetica, sans-serif">Word Puzzle Match </font></strong></div></td>
+    <td><div align="right">
+        <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+        <select name="PUZ_W" id="PUZ_W" style="border:1px solid red;background-color:#D6CDFE;">
+		%PUZ_W_LIST%
+        </select>
+        x
+        <select name="PUZ_L" id="PUZ_L" style="border:1px solid red;background-color:#D6CDFE;">
+		%PUZ_L_LIST%
+        </select>
+    </font></div></td>
+  </tr>
+</table>
+  </td>
+</tr>
+<!-- RESULT -->
+<tr>
+	<td colspan="%PUZ_W%" bgcolor="#FEFDC0"><div align="center"><strong><font color="#FF0000" size="2" face="Verdana, Arial, Helvetica, sans-serif">%RESULTS%</font></strong></div></td>
+</tr>
+<!-- RESULT -->
+<tr>
+  <td colspan="%PUZ_W%"><div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Find:</strong> %WORD_LIST% <input type="hidden" name="word_list" id="word_list" value="%WORD_LIST%"></font></div></td>
+</tr>
+END;
+
+/* Lettering Template */
+$LETTER_TEMPLATE = <<<END
+<!-- PUZ_L -->
+<tr>
+<!-- PUZ_L -->
+	<!-- PUZ_W -->
+	<td
+	id="%ID%" 
+	style="cursor:pointer;" 
+	onClick="if(this.style.backgroundColor == 'rgb(255, 255, 255)' ||
+	this.style.backgroundColor == '' || this.style.backgroundColor == '#ffffff'
+	|| this.style.backgroundColor == '#cccccc' || this.style.backgroundColor == 'rgb(204, 204, 204)'){
+	this.style.backgroundColor='#FFE8E8';}else{this.style.backgroundColor='#FFFFFF';}add_letter('%LETTER%');"
+	><div align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;">%LETTER%</div></td>
+	<!-- PUZ_W -->
+<!-- PUZ_L -->
+</tr>
+<!-- PUZ_L -->
+END;
+
+/* Footer Template + Form/Hint */
+$FOOTER_TEMPLATE = <<<END
+<tr>
+	<td colspan="%PUZ_W%">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#F0E1E1">
+    <td><div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Current Word</font></div></td>
+    <td><div align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">My Words </font></div></td>
+  </tr>
+  <tr>
+    <td width="50%"><div align="center">
+      <textarea name="cur_word" id="cur_word" style="width:100%" rows="4" readonly></textarea>
+    </div></td>
+    <td width="50%"><div align="center">
+      <textarea name="my_words" id="my_words" style="width:100%" rows="4" readonly></textarea>
+    </div></td>
+  </tr>
+  <tr>
+    <td width="50%"><div align="center">
+      <input type="button" name="Button" onClick="document.getElementById('cur_word').value='';"
+	  	 value="Clear" style="border:1px solid pink;background-color:#D6CDFE;">&nbsp;
+      <input type="button" name="Button" value="Add to List" onClick="add_word();show_hint(2);"
+	  	style="border:1px solid pink;background-color:#D6CDFE;">
+    </div></td>
+    <td width="50%"><div align="center">
+        <input type="button" name="Button" value="Clear" onClick="document.getElementById('my_words').value='';"
+			style="border:1px solid pink;background-color:#D6CDFE;">
+      &nbsp;
+        <input type="button" name="Button" value="Del Word" onClick="remove_word();"
+			style="border:1px solid pink;background-color:#D6CDFE;">
+    </div></td>
+  </tr>
+</table>
+	</td>
+</td>
+    <tr>
+    <td colspan="%PUZ_W%"><div align="center">
+<input type="button" name="Button" value="Clear Letters" onClick="show_hint(2);" style="border:1px solid red;background-color:#D6CDFE;">
+|      
+        <input type="button" name="Button" value="Hint" onClick="show_hint(1);" style="border:1px solid red;background-color:#D6CDFE;">
+  | 
+  <input type="submit" name="Submit" value="Check Answers" style="border:1px solid red;background-color:#D6CDFE;">   
+      
+    </div></td>
+  </tr> 
+</table>
+</form>
+<!--
+/************* WordSearchPuzzle V1.0 *******************/
+/*
+Released by AwesomePHP.com, under the GPL License, a
+copy of it should be attached to the zip file, or
+you can view it on http://AwesomePHP.com/gpl.txt
+*/
+/************* WordSearchPuzzle V1.0 *******************/	
+-->
+</body>
+</html>
+END;
+?>
