@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language version="1.0">
+	<info>
+		<title>fr-FR</title>
+		<code>fr-FR</code>
+		<character_set>utf-8</character_set>
+		<version>1.0.0</version>
+		<minVersion>5.0.0</minVersion>
+		<maxVersion>6.*.*</maxVersion>
+	</info>
+	<translation>
+		<group name="paypal_commerce">
+			<string name="pay_by_card"><![CDATA[Pagar con tarjeta]]></string>
+			<string name="card_number"><![CDATA[Número de tarjeta]]></string>
+			<string name="expiry_date"><![CDATA[Venc.]]></string>
+			<string name="cvv"><![CDATA[CVV]]></string>
+			<string name="cvv_placeholder"><![CDATA[CVV]]></string>
+			<string name="make_payment"><![CDATA[Pagar]]></string>
+			<string name="expire_placeholder"><![CDATA[MM / AAAA]]></string>
+			<string name="please_wait"><![CDATA[Por favor espera &hellip;]]></string>
+		</group>
+	</translation>
+</language>

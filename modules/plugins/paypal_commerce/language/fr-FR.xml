@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language version="1.0">
+	<info>
+		<title>fr-FR</title>
+		<code>fr-FR</code>
+		<character_set>utf-8</character_set>
+		<version>1.0.0</version>
+		<minVersion>5.0.0</minVersion>
+		<maxVersion>6.*.*</maxVersion>
+	</info>
+	<translation>
+		<group name="paypal_commerce">
+			<string name="pay_by_card"><![CDATA[Payer par carte]]></string>
+			<string name="card_number"><![CDATA[Numéro de carte]]></string>
+			<string name="expiry_date"><![CDATA[Expire]]></string>
+			<string name="cvv"><![CDATA[CVV]]></string>
+			<string name="cvv_placeholder"><![CDATA[CVV]]></string>
+			<string name="make_payment"><![CDATA[Payer]]></string>
+			<string name="expire_placeholder"><![CDATA[MM / AAAA]]></string>
+			<string name="title"><![CDATA[Plateforme de commerce PayPal]]></string>
+			<string name="strap"><![CDATA[Acceptez le paiement par carte, PayPal et d'autres modes de paiement via la nouvelle plateforme de commerce PayPal pour les entreprises.]]></string>
+			<string name="onboarding"><![CDATA[Intégration]]></string>
+			<string name="primary_email"><![CDATA[Courriel principal]]></string>
+			<string name="secret"><![CDATA[Secret]]></string>
+			<string name="client_id"><![CDATA[Client ID]]></string>
+			<string name="click_to_reveal"><![CDATA[Cliquez pour révéler]]></string>
+			<string name="payment_settings"><![CDATA[Paramètres de paiement]]></string>
+			<string name="enable_ppc"><![CDATA[Activer le Commerce avec PayPal]]></string>
+			<string name="settlement_mode"><![CDATA[Mode de règlement]]></string>
+			<string name="capture"><![CDATA[Capturez le paiement immédiatement]]></string>
+			<string name="authorize"><![CDATA[Autoriser le paiement à capturer plus tard]]></string>
+			<string name="3ds"><![CDATA[3D Secure]]></string>
+			<string name="3ds_note"><![CDATA[3D Secure vous permet d'authentifier les détenteurs de cartes via les émetteurs de cartes. Il réduit le risque de fraude lorsque vous utilisez des cartes prises en charge et améliore les performances des transactions. Une authentification 3D Secure réussie peut transférer la responsabilité des rétrofacturation dues à une fraude de votre part - le commerçant - à l'émetteur de la carte.]]></string>
+			<string name="3ds_note_2"><![CDATA[L'authentification 3D Secure n'est effectuée que si la carte est inscrite au service. Dans les scénarios où l'authentification 3D Secure n'a pas réussi, vous avez la possibilité d'effectuer le paiement à vos propres risques, ce qui signifie que vous, le commerçant, serez responsable en cas de refacturation.]]></string>
+			<string name="3ds_scenario"><![CDATA[Scénarios 3D Secure]]></string>
+			<string name="hide_advanced"><![CDATA[Masquer les paramètres avancés]]></string>
+			<string name="show_advanced"><![CDATA[Afficher les paramètres avancés]]></string>
+			<string name="button_styling"><![CDATA[Style des boutons]]></string>
+			<string name="button_layout"><![CDATA[Disposition des boutons intelligents]]></string>
+			<string name="horizontal"><![CDATA[Horizontal]]></string>
+			<string name="vertical"><![CDATA[Vertical]]></string>
+			<string name="button_color"><![CDATA[Couleur du bouton intelligent]]></string>
+			<string name="gold"><![CDATA[Or]]></string>
+			<string name="blue"><![CDATA[Bleu]]></string>
+			<string name="silver"><![CDATA[Argent]]></string>
+			<string name="white"><![CDATA[Blanc]]></string>
+			<string name="black"><![CDATA[Noir]]></string>
+			<string name="button_shape"><![CDATA[Forme de bouton intelligent]]></string>
+			<string name="rectangle"><![CDATA[Rectangle]]></string>
+			<string name="pill"><![CDATA[Ovale]]></string>
+			<string name="button_tagline"><![CDATA[Slogan du bouton intelligent (horizontal uniquement)]]></string>
+			<string name="button_funding"><![CDATA[Icônes de financement (horizontal uniquement)]]></string>
+			<string name="button_size"><![CDATA[Taille du bouton intelligent]]></string>
+			<string name="small"><![CDATA[Petit]]></string>
+			<string name="medium"><![CDATA[Moyen]]></string>
+			<string name="large"><![CDATA[Grand]]></string>
+			<string name="responsive"><![CDATA[Sensible]]></string>
+			<string name="webhooks"><![CDATA[Webhooks]]></string>
+			<string name="url"><![CDATA[URL]]></string>
+			<string name="webhook_id"><![CDATA[Webhook ID]]></string>
+			<string name="start_today"><![CDATA[Commencez à accepter des paiements avec PayPal dès aujourd'hui!]]></string>
+			<string name="sign_up_or"><![CDATA[Inscrivez-vous ou connectez votre compte existant]]></string>
+			<string name="disconnect"><![CDATA[Déconnectez votre compte PayPal]]></string>
+			<string name="disconnect_check"><![CDATA[Voulez-vous vraiment déconnecter votre compte PayPal?]]></string>
+			<string name="express_signup"><![CDATA[Si votre pays n'est pas disponible dans la liste lorsque vous passez par l'expérience d'intégration PayPal, veuillez <a target="_blank" data-paypal-onboard-complete="onboardedCallback" href="%SIGN_UP_LINK%" data-paypal-button="">cliquez ici</a>.]]></string>
+			<string name="undefined_undefined_undefined"><![CDATA[3D Secure non requis pour l'acheteur ou le réseau de cartes n'exigeait pas 3D Secure.]]></string>
+			<string name="false_ERROR_ERROR"><![CDATA[Une erreur s'est produite avec le système d'authentification 3DS.]]></string>
+			<string name="false_NO_SKIPPED_BY_BUYER"><![CDATA[L'acheteur s'est vu présenter 3D Secure mais a choisi de sauter l'authentification.]]></string>
+			<string name="false_NO_FAILURE"><![CDATA[L'acheteur a peut-être échoué ou l'appareil n'a pas été vérifié.]]></string>
+			<string name="false_NO_BYPASSED"><![CDATA[3D Secure a été ignoré car le système d'authentification n'a pas nécessité de défi.]]></string>
+			<string name="false_NO_ATTEMPTED"><![CDATA[La carte n'est pas inscrite à 3D Secure car la banque émettrice de la carte ne participe pas à 3D Secure.]]></string>
+			<string name="false_NO_UNAVAILABLE"><![CDATA[La banque émettrice n'est pas en mesure de terminer l'authentification.]]></string>
+			<string name="false_NO_CARD_INELIGIBLE"><![CDATA[La carte n'est pas éligible à l'authentification 3DS Secure.]]></string>
+			<string name="please_wait"><![CDATA[S'il vous plaît, attendez &hellip;]]></string>
+			<string name="order_status_behaviour"><![CDATA[Comportement du statut de la commande]]></string>
+   			<string name="order_status_change_on"><![CDATA[Mettre à jour l'état de la commande en "Traitement" au]]></string>
+   			<string name="payment_capture"><![CDATA[paiement direct]]></string>
+   			<string name="payment_authorization"><![CDATA[autorisation de paiement]]></string>
+		</group>
+	</translation>
+</language>
